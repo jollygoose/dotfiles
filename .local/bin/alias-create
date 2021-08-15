@@ -1,0 +1,8 @@
+#!/bin/bash
+
+name=$1
+ftn=$2
+
+echo "function $name
+    $ftn
+end" > "$HOME/.config/fish/functions/$name.fish"

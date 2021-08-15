@@ -1,0 +1,3 @@
+function neo
+    neofetch
+end

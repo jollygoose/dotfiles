@@ -1,0 +1,109 @@
+function fish_prompt
+    set -l retc red
+    test $status = 0; and set retc normal
+
+    set -q __fish_git_prompt_showupstream
+    or set -g __fish_git_prompt_showupstream auto
+
+    function _nim_prompt_wrapper
+        set retc $argv[1]
+        set field_name $argv[2]
+        set field_value $argv[3]
+
+        set_color normal
+        set_color yellow
+        echo -n '─'
+        set_color -o yellow
+        echo -n '['
+        set_color normal
+        test -n $field_name
+        and echo -n $field_name:
+        set_color $retc
+        echo -n $field_value
+        set_color -o yellow
+        echo -n ']'
+    end
+
+    # set_color $retc
+    set_color yellow
+    echo -n '┬─'
+    set_color -o yellow
+    echo -n [
+    if test "$USER" = root -o "$USER" = toor
+        set_color -o red
+        echo -n $USER💀
+        set_color -o black
+        echo -n @
+    else
+        echo -n 🐊
+        set_color -o black
+        echo -n @
+    end
+    set_color -o green
+    echo -n (prompt_hostname)
+    set_color -o purple
+    echo -n :
+    set_color -o yellow
+    echo -n (prompt_pwd)
+    set_color -o yellow
+    echo -n ']'
+
+    # Date
+    _nim_prompt_wrapper $retc '' (date +%X)
+    
+    # Virtual Environment
+    set -q VIRTUAL_ENV_DISABLE_PROMPT
+    or set -g VIRTUAL_ENV_DISABLE_PROMPT true
+    set -q VIRTUAL_ENV
+    and _nim_prompt_wrapper $retc V (basename "$VIRTUAL_ENV")
+
+    # git
+    set prompt_git (fish_git_prompt | string trim -c ' ()')
+    test -n "$prompt_git"
+    and _nim_prompt_wrapper $retc G $prompt_git
+    if not set -q __fish_git_prompt_show_informative_status
+        set -g __fish_git_prompt_show_informative_status 1
+    end
+    if not set -q __fish_git_prompt_color_branch
+        set -g __fish_git_prompt_color_branch brmagenta
+    end
+    if not set -q __fish_git_prompt_showupstream
+        set -g __fish_git_prompt_showupstream "informative"
+    end
+    if not set -q __fish_git_prompt_showdirtystate
+        set -g __fish_git_prompt_showdirtystate "yes"
+    end
+    if not set -q __fish_git_prompt_color_stagedstate
+        set -g __fish_git_prompt_color_stagedstate yellow
+    end
+    if not set -q __fish_git_prompt_color_invalidstate
+        set -g __fish_git_prompt_color_invalidstate red
+    end
+    if not set -q __fish_git_prompt_color_cleanstate
+        set -g __fish_git_prompt_color_cleanstate brgreen
+    end
+
+    # Battery status
+    type -q acpi
+    and test (acpi -a 2> /dev/null | string match -r off)
+    and _nim_prompt_wrapper $retc B (acpi -b | cut -d' ' -f 4-)
+
+    # New line
+    echo
+
+    # Background jobs
+    set_color normal
+    for job in (jobs)
+        set_color $retc
+        echo -n '│ '
+        set_color brown
+        echo $job
+    end
+    set_color normal
+    # set_color $retc
+    set_color yellow
+    echo -n '╰─☕'
+    set_color -o red
+    echo -n ' '
+    set_color normal
+end

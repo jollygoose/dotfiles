@@ -1,0 +1,4 @@
+# Defined in - @ line 1
+function up --wraps='sudo dnf update' --wraps='sudo dnf up --refresh --setopt=install_weak_deps=False' --wraps='sudo dnf up --setopt=install_weak_deps=False' --description 'alias up sudo dnf up --setopt=install_weak_deps=False'
+  sudo dnf up --setopt=install_weak_deps=False $argv;
+end
