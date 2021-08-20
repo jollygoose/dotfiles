@@ -11,41 +11,37 @@ function fish_prompt
         set field_value $argv[3]
 
         set_color normal
-        set_color yellow
+        set_color purple
         echo -n '─'
-        set_color -o yellow
+        set_color -o purple
         echo -n '['
         set_color normal
         test -n $field_name
         and echo -n $field_name:
         set_color $retc
         echo -n $field_value
-        set_color -o yellow
+        set_color -o purple
         echo -n ']'
     end
 
-    # set_color $retc
-    set_color yellow
+    set_color purple
     echo -n '┬─'
-    set_color -o yellow
+    set_color -o purple
     echo -n [
-    if test "$USER" = root -o "$USER" = toor
-        set_color -o red
-        echo -n $USER💀
-        set_color -o black
-        echo -n @
+    echo -n 🦈
+    set_color -o black
+    echo -n @
+    if [ -z "$SSH_CLIENT" ]
+        set_color -o green
     else
-        echo -n 🐊
-        set_color -o black
-        echo -n @
+        set_color -o blue
     end
-    set_color -o green
     echo -n (prompt_hostname)
     set_color -o purple
     echo -n :
     set_color -o yellow
     echo -n (prompt_pwd)
-    set_color -o yellow
+    set_color -o purple
     echo -n ']'
 
     # Date
@@ -96,12 +92,8 @@ function fish_prompt
     end
     set_color normal
     # set_color $retc
-    set_color yellow
-    if test "$USER" = root -o "$USER" = toor
-        echo -n '╰─💥'
-    else
-        echo -n '╰─🥡'
-    end
+    set_color purple
+    echo -n '╰─🥞'
     set_color -o red
     echo -n ' '
     set_color normal
