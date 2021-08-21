@@ -24,7 +24,6 @@ function fish_prompt
         echo -n ']'
     end
 
-    # set_color $retc
     set_color yellow
     echo -n '┬─'
     set_color -o yellow
@@ -39,7 +38,11 @@ function fish_prompt
         set_color -o black
         echo -n @
     end
-    set_color -o green
+    if [ -z "$SSH_CLIENT" ]
+        set_color -o cyan
+    else
+        set_color -o green
+    end
     echo -n (prompt_hostname)
     set_color -o purple
     echo -n :
