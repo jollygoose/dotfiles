@@ -1,0 +1,50 @@
+add_newline = true
+
+format = """
+[┌](bold green)$username$hostname$all$fill$time
+[└─](bold green)$character"""
+
+[fill]
+symbol = ""
+
+[line_break]
+disabled = true
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[hostname]
+ssh_only = false
+format = "@[$hostname]($style) "
+trim_at = "-"
+style = "bold dimmed white"
+disabled = false
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
+
+[username]
+style_user = "bold cyan"
+show_always = true
+format = "[$user]($style)"
+
+[time]
+time_format = "%T"
+format = " 🕙 $time($style) "
+style = "bright-white"
+disabled = false
+
+[character]
+success_symbol = "[🐧](bold green)"
+error_symbol = "[💥](bold red)"
+
+[aws]
+disabled = true

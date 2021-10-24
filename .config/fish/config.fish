@@ -8,4 +8,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export NG_CLI_ANALYTICS=ci
 export PATH="$HOME/.local/npm/bin:$PATH"
 export CHROME_EXECUTABLE=chromium
-
+starship init fish | source
