@@ -21,7 +21,6 @@ discharging_symbol = "💀 "
 [hostname]
 ssh_only = false
 format = "@[$hostname]($style) "
-trim_at = "-"
 style = "bold dimmed white"
 disabled = false
 
@@ -47,4 +46,7 @@ success_symbol = "[🐧](bold green)"
 error_symbol = "[💥](bold red)"
 
 [aws]
+disabled = true
+
+[python]
 disabled = true
