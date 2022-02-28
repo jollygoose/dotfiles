@@ -1,0 +1,1 @@
+fish_prompt.fish##c.server
