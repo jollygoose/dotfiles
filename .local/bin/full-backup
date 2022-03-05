@@ -1,9 +1,0 @@
-#!/bin/bash
-src=$1
-remote=$2
-user_name=$(getent passwd "$uid" | cut -d: -f1)
-
-echo "Starting Backup $(date +"%Y-%m-%d_%H-%M-%S")"
-rsync -aAXHSux --info=progress2 --stats --delete --numeric-ids --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/"$user_name"/.cache/*","/var/cache/*","/var/log/*"} "$src" "$remote"
-echo "Backup Complete $(date +"%Y-%m-%d_%H-%M-%S")"
-
