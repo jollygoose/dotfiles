@@ -10,5 +10,13 @@ export NG_CLI_ANALYTICS=ci
 export PATH="$HOME/.local/npm/bin:$PATH"
 export CHROME_EXECUTABLE=chromium
 starship init fish | source
-theme.sh vs-code-dark-plus
+#theme.sh vs-code-dark-plus
 kubectl completion fish | source
+
+# https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431
+# disable the syntax highlighting. makes swapping to light themed terminals easy
+for color in (set | grep -Eo '^fish_color_[a-zA-Z0-9_]+')
+    # optional: save the color to be restored later
+    #set -g old_$color $$color
+    set $color normal
+end

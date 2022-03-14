@@ -22,17 +22,17 @@ discharging_symbol = "💀 "
 ssh_only = false
 format = "@[$hostname]($style) "
 trim_at = "-"
-style = "bold dimmed white"
+#style = "bold black"
 disabled = false
 
 [memory_usage]
 format = "$symbol[${ram}( | ${swap})]($style) "
 threshold = 70
-style = "bold dimmed white"
+#style = "bold black"
 disabled = false
 
 [username]
-style_user = "bold green"
+#style_user = "bold black"
 show_always = true
 format = "[$user]($style)"
 

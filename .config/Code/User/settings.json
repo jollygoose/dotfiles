@@ -90,7 +90,7 @@
     "git.path": "/usr/bin/git",
     "security.workspace.trust.untrustedFiles": "open",
     "security.workspace.trust.banner": "never",
-    "workbench.colorTheme": "Dracula Soft",
+    "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
     "vscode-kubernetes.kubectl-path.linux": "/snap/bin/kubectl",
     "vscode-kubernetes.kubectl-path": "/snap/bin/kubectl",
     "window.zoomLevel": -1,
