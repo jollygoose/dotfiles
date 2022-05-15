@@ -2,7 +2,7 @@
     "python.autoComplete.addBrackets": true,
     "window.menuBarVisibility": "toggle",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "JetBrains Mono Medium",
+    "editor.fontFamily": "JetBrainsMono NF, Medium",
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
@@ -76,7 +76,7 @@
     "dart.flutterCreateAndroidLanguage": "java",
     "dart.previewLsp": true,
     "terminal.external.linuxExec": "kitty",
-    "terminal.integrated.fontFamily": "JetBrains Mono Medium",
+    "terminal.integrated.fontFamily": "JetBrainsMono NF, Medium",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "python.pythonPath": "/usr/bin/python",
@@ -90,9 +90,12 @@
     "git.path": "/usr/bin/git",
     "security.workspace.trust.untrustedFiles": "open",
     "security.workspace.trust.banner": "never",
-    "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
+    "workbench.colorTheme": "GitHub Dark",
     "vscode-kubernetes.kubectl-path.linux": "/snap/bin/kubectl",
     "vscode-kubernetes.kubectl-path": "/snap/bin/kubectl",
-    "window.zoomLevel": -1,
     "workbench.iconTheme": "material-icon-theme",
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "disabled"
+    },
+    "window.zoomLevel": 1,
 }
