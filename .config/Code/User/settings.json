@@ -97,5 +97,5 @@
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": -1,
 }
