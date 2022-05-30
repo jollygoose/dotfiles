@@ -10,7 +10,7 @@ export NG_CLI_ANALYTICS=ci
 export PATH="$HOME/.local/npm/bin:$PATH"
 export CHROME_EXECUTABLE=chromium
 starship init fish | source
-#theme.sh vs-code-dark-plus
+theme.sh vs-code-dark-plus
 kubectl completion fish | source
 
 # https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431
