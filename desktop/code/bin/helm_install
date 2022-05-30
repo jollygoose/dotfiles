@@ -1,0 +1,2 @@
+#!/bin/bash
+helm upgrade --install "$1" -n "$1" --create-namespace picharts/"$1"

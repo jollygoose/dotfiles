@@ -1,0 +1,2 @@
+#!/bin/bash
+helm uninstall "$1" -n "$1"
