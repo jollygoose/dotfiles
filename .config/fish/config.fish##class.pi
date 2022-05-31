@@ -1,0 +1,13 @@
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/bin/aws:$PATH"
+starship init fish | source
+theme.sh vs-code-dark-plus
+
+# from @xcad2k dotfiles: https://github.com/xcad2k/dotfiles/blob/main/.zshrc
+export STARSHIP_DISTRO=""
+
+# https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431
+# disable the syntax highlighting. makes swapping to light themed terminals easy
+for color in (set | grep -Eo '^fish_color_[a-zA-Z0-9_]+')
+    set $color normal
+end
