@@ -10,7 +10,7 @@ export NG_CLI_ANALYTICS=ci
 export PATH="$HOME/.local/npm/bin:$PATH"
 export CHROME_EXECUTABLE=chromium
 starship init fish | source
-theme.sh vs-code-dark-plus
+#theme.sh vs-code-dark-plus
 kubectl completion fish | source
 
 # from @xcad2k dotfiles: https://github.com/xcad2k/dotfiles/blob/main/.zshrc
@@ -60,7 +60,7 @@ switch $_distro
         set ICON "";;
     case manjaro               
         set ICON "";;
-    case *rhel                  
+    case rhel                  
         set ICON "";;
     case macos                 
         set ICON "";;
@@ -76,5 +76,5 @@ export STARSHIP_DISTRO="$ICON"
 for color in (set | grep -Eo '^fish_color_[a-zA-Z0-9_]+')
     # optional: save the color to be restored later
     #set -g old_$color $$color
-    set $color normal
+    #set $color normal
 end

@@ -1,1 +1,0 @@
-up.fish##d.Ubuntu
