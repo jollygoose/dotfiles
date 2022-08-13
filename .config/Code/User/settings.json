@@ -97,5 +97,6 @@
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
     },
+    "security.workspace.trust.enabled": false,
     "window.zoomLevel": -1,
 }

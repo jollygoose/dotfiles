@@ -1,1 +1,1 @@
-fish_prompt.fish##c.server
+fish_prompt.fish##default
