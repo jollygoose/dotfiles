@@ -13,20 +13,20 @@ function fish_prompt
         set_color normal
         set_color yellow
         echo -n '─'
-        set_color -o yellow
+        set_color -o blue
         echo -n '['
         set_color normal
         test -n $field_name
         and echo -n $field_name:
         set_color $retc
         echo -n $field_value
-        set_color -o yellow
+        set_color -o blue
         echo -n ']'
     end
 
     set_color yellow
     echo -n '┬─'
-    set_color -o yellow
+    set_color -o blue
     echo -n [
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
@@ -48,7 +48,7 @@ function fish_prompt
     echo -n :
     set_color -o yellow
     echo -n (prompt_pwd)
-    set_color -o yellow
+    set_color -o blue
     echo -n ']'
 
     # Date

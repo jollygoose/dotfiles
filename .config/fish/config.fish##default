@@ -1,5 +1,5 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    export PATH="$HOME/.local/bin:$PATH"
 end
 
 # https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431
