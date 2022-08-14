@@ -1,1 +1,1 @@
-fish_prompt.fish##default
+fish_prompt.fish##c.desktop
