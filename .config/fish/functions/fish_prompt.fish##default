@@ -30,11 +30,11 @@ function fish_prompt
     echo -n [
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
-        echo -n $USER💀
+        echo -n 🐛
         set_color -o black
         echo -n @
     else
-        echo -n 🐊
+        echo -n 🐛
         set_color -o black
         echo -n @
     end
@@ -101,9 +101,9 @@ function fish_prompt
     # set_color $retc
     set_color yellow
     if test "$USER" = root -o "$USER" = toor
-        echo -n '╰─💥'
+        echo -n '╰─>'
     else
-        echo -n '╰─🥡'
+        echo -n '╰─>'
     end
     set_color -o red
     echo -n ' '
