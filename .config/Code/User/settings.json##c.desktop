@@ -17,7 +17,6 @@
         // "list.hoverBackground": "#41a6d9",
         // "editorLineNumber.activeForeground": "#FEA44C",
         // // "editor.selectionBackground": "#05A1F7",
-        
         // // color pallette and all credit for the awesome theme from:
         // // https://github.com/daniruiz/flat-remix-gtk
         // "terminal.ansiBlack": "#1F2229",
@@ -91,12 +90,13 @@
     "security.workspace.trust.untrustedFiles": "open",
     "security.workspace.trust.banner": "never",
     "workbench.colorTheme": "GitHub Dark",
-    "vscode-kubernetes.kubectl-path.linux": "/snap/bin/kubectl",
-    "vscode-kubernetes.kubectl-path": "/snap/bin/kubectl",
+    // "vscode-kubernetes.kubectl-path.linux": "/snap/bin/kubectl",
+    // "vscode-kubernetes.kubectl-path": "/snap/bin/kubectl",
     "workbench.iconTheme": "material-icon-theme",
     "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "disabled"
+        "vs-kubernetes.crd-code-completion": "enabled",
+        // "vs-kubernetes.enable-snap-flag": true,
     },
     "security.workspace.trust.enabled": false,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 1,
 }

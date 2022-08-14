@@ -22,7 +22,9 @@ $rust\
 $docker_context\
 [](fg:#06969A bg:#33658A)\
 $time\
-[ ](fg:#33658A)\
+[](fg:#33658A)\
+$line_break\
+$character
 """
 
 # Disable the blank line at the start of the prompt
@@ -122,4 +124,8 @@ format = '[[ $symbol ($version) ](bg:#86BBD8)]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[[ ♥ $time ](bg:#33658A)]($style)'
+format = '[[ ♥ $time](bg:#33658A)]($style)'
+
+[character]
+success_symbol = "[🥞](238)"
+error_symbol = "[💥](238)"
