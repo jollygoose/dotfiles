@@ -1,5 +1,9 @@
 if status is-interactive
     export PATH="$HOME/.local/bin:$PATH"
+    export PATH="/opt/homebrew/bin/:$PATH"
+    export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:$PATH"
+    export PATH="/Users/badger/Library/Python/3.9/bin/:$PATH"
+    export PATH="/usr/local/bin/:$PATH"
 end
 
 # https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431

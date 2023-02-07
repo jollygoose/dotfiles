@@ -1,3 +1,0 @@
-function tt
-    tmux
-end
