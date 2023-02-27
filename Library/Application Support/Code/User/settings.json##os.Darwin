@@ -2,7 +2,7 @@
     "telemetry.telemetryLevel": "off",
     "editor.fontFamily": "JetBrainsMono Nerd Font, Medium",
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Default Dark+ Experimental",
     "editor.cursorStyle": "underline",
     "terminal.integrated.cursorStyle": "underline",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -22,5 +22,15 @@
         "terminalCursor.background": "#00ff00",
         "terminalCursor.foreground": "#00ff00",
         "scrollbarSlider.background": "#00ff00",
+    },
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "peacock.affectDebuggingStatusBar": true,
+    "peacock.affectEditorGroupBorder": true,
+    "peacock.affectPanelBorder": true,
+    "peacock.affectSideBarBorder": true,
+    "peacock.affectStatusAndTitleBorders": true,
+    "peacock.surpriseMeOnStartup": true,
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled"
     }
 }

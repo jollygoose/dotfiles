@@ -11,7 +11,7 @@ function fish_prompt
         set field_value $argv[3]
 
         set_color normal
-        set_color red
+        set_color white
         echo -n '─'
         set_color -o blue
         echo -n '['
@@ -24,17 +24,17 @@ function fish_prompt
         echo -n ']'
     end
 
-    set_color red
+    set_color white
     echo -n '┬─'
     set_color -o blue
     echo -n [
     if test "$USER" = root -o "$USER" = toor
         set_color -o red
-        echo -n 🐛
+        echo -n 💣
         set_color -o black
         echo -n @
     else
-        echo -n 🐛
+        echo -n 🦡
         set_color -o black
         echo -n @
     end
@@ -60,6 +60,32 @@ function fish_prompt
     set -q VIRTUAL_ENV
     and _nim_prompt_wrapper $retc V (basename "$VIRTUAL_ENV")
 
+    # git
+    set prompt_git (fish_git_prompt | string trim -c ' ()')
+    test -n "$prompt_git"
+    and _nim_prompt_wrapper $retc G $prompt_git
+    if not set -q __fish_git_prompt_show_informative_status
+        set -g __fish_git_prompt_show_informative_status 1
+    end
+    if not set -q __fish_git_prompt_color_branch
+        set -g __fish_git_prompt_color_branch brmagenta
+    end
+    if not set -q __fish_git_prompt_showupstream
+        set -g __fish_git_prompt_showupstream "informative"
+    end
+    if not set -q __fish_git_prompt_showdirtystate
+        set -g __fish_git_prompt_showdirtystate "yes"
+    end
+    if not set -q __fish_git_prompt_color_stagedstate
+        set -g __fish_git_prompt_color_stagedstate yellow
+    end
+    if not set -q __fish_git_prompt_color_invalidstate
+        set -g __fish_git_prompt_color_invalidstate red
+    end
+    if not set -q __fish_git_prompt_color_cleanstate
+        set -g __fish_git_prompt_color_cleanstate brgreen
+    end
+
     # New line
     echo
 
@@ -73,9 +99,9 @@ function fish_prompt
     end
     set_color normal
     # set_color $retc
-    set_color red
+    set_color white
     if test "$USER" = root -o "$USER" = toor
-        echo -n '╰─🛠️'
+        echo -n '╰─>'
     else
         echo -n '╰─💥'
     end

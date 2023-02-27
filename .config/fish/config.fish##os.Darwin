@@ -6,10 +6,16 @@ if status is-interactive
     export PATH="/usr/local/bin/:$PATH"
 end
 
-# https://github.com/fish-shell/fish-shell/issues/2072#issuecomment-152414431
-# disable the syntax highlighting. makes swapping to light themed terminals easy
-for color in (set | grep -Eo '^fish_color_[a-zA-Z0-9_]+')
-    # optional: save the color to be restored later
-    #set -g old_$color $$color
-    #set $color normal
+# Turn off syntax highlighting
+for color in fish_color_command fish_color_comment fish_color_end \
+    fish_color_escape fish_color_match fish_color_operator \
+    fish_color_param fish_color_search_match fish_color_quote \
+    fish_pager_color_description fish_pager_color_prefix
+    set $color normal
 end
+
+set fish_color_autosuggestion white
+set fish_color_error red
+set fish_pager_color_progress white
+theme.sh jellybeans
+starship init fish | source
