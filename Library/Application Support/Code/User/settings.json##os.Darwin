@@ -2,7 +2,7 @@
     "telemetry.telemetryLevel": "off",
     "editor.fontFamily": "JetBrainsMono Nerd Font, Medium",
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "Default Dark+ Experimental",
+    "workbench.colorTheme": "Monokai Dimmed",
     "editor.cursorStyle": "underline",
     "terminal.integrated.cursorStyle": "underline",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -23,7 +23,7 @@
         "terminalCursor.foreground": "#00ff00",
         "scrollbarSlider.background": "#00ff00",
     },
-    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.defaultProfile.osx": "zsh",
     "peacock.affectDebuggingStatusBar": true,
     "peacock.affectEditorGroupBorder": true,
     "peacock.affectPanelBorder": true,
@@ -32,5 +32,16 @@
     "peacock.surpriseMeOnStartup": true,
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "enabled"
-    }
+    },
+    "editor.tabCompletion": "on",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.sideBar.location": "right",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.tabSizing": "shrink",
+    "window.nativeTabs": true,
+    "terminal.integrated.tabStopWidth": 4,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.showTabs": "single",
+    "window.zoomLevel": 1
 }

@@ -11,5 +11,13 @@
     {
         "key": "alt+t",
         "command": "python.execInTerminal"
+    },
+    {
+        "key": "shift+alt+z",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "key": "cmd+k z",
+        "command": "-workbench.action.toggleZenMode"
     }
 ]
