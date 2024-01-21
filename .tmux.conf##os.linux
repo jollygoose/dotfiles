@@ -1,0 +1,49 @@
+set -g mouse on
+
+#bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+#bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection clipboard -i"
+
+set-option -g default-shell /bin/zsh
+
+#from https://www.youtube.com/watch?v=H70lULWJeig
+
+unbind r
+bind r source-file ~/.tmux.conf
+
+set -g prefix C-s
+
+# act like vim
+setw -g mode-keys vi
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+### from https://github.com/tmux-plugins/tpm
+set -g @tpm-clean 'u'
+
+# plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-yank'
+
+set -g @plugin 'dracula/tmux'
+set -g @dracula-show-powerline true
+set -g @dracula-plugins "cpu-usage ram-usage time"
+set -g @dracula-ram-usage-colors "green dark_gray"
+set -g @dracula-kubernetes-context-label "k8s"
+set -g @dracula-kubernetes-eks-hide-arn true
+set -g @dracula-kubernetes-hide-user true
+set -g @dracula-border-contrast true
+set -g @dracula-show-location false
+set -g @dracula-show-flags true
+set -g @dracula-show-left-icon session
+set -g status-position top
+
+set -g @yank_selection_mouse 'primary' # or 'primary' or 'secondary'
+
+# run '~/.tmux/plugins/tpm/tpm'
+run -b '~/.tmux/plugins/tpm/tpm'
+# run ~/.tmux/plugins/tpm
+
+
