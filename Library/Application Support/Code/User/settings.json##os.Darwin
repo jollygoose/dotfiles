@@ -5,6 +5,7 @@
     "workbench.colorTheme": "Monokai Dimmed",
     "editor.cursorStyle": "underline",
     "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.defaultProfile.linux": "tmux",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.rulers": [
         // 80,
@@ -43,5 +44,6 @@
     "terminal.integrated.tabStopWidth": 4,
     "workbench.editor.scrollToSwitchTabs": true,
     "workbench.editor.showTabs": "single",
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "git.openRepositoryInParentFolders": "never"
 }

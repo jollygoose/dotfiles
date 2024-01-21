@@ -35,7 +35,7 @@ show_always = true
 [directory]
 truncation_length = 3
 truncation_symbol = "…/"
-home_symbol = " ~"
+home_symbol = "🏠"
 read_only_style = "197"
 read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
@@ -75,11 +75,11 @@ format = "via [ $context](bold blue) "
 format = "via [ $version](bold purple) "
 
 [python]
-symbol = " "
+symbol = "🐍 "
 python_binary = "python3"
 
 [nodejs]
-format = "via [ $version](bold green) "
+format = "via [🤖 $version](bold green) "
 disabled = true
 
 [ruby]
@@ -92,7 +92,7 @@ disabled = false
 [memory_usage]
 format = '$symbol[${ram}( | ${swap})]($style) '
 threshold = 70
-disabled = false
+disabled = true
 
 [battery]
 full_symbol = "🔋 "
