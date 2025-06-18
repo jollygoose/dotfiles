@@ -101,3 +101,6 @@ disabled = false
 format = 'on [$symbol($profile ) $region ]($style)'
 style = 'bold yellow'
 symbol = '☁️ '
+
+[container]
+format = '[$symbol \[$name\]]($style) '
