@@ -2,10 +2,9 @@
     "telemetry.telemetryLevel": "off",
     "editor.fontFamily": "JetBrainsMono Nerd Font, Medium",
     "editor.fontLigatures": true,
-    "workbench.colorTheme": "Monokai Dimmed",
-    "editor.cursorStyle": "underline",
-    "terminal.integrated.cursorStyle": "underline",
-    "terminal.integrated.defaultProfile.linux": "tmux",
+    "workbench.colorTheme": "Shades of Purple",
+    "editor.cursorStyle": "block",
+    // "terminal.integrated.defaultProfile.linux": "tmux",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.rulers": [
         // 80,
@@ -20,10 +19,13 @@
         "tab.activeBorder": "#ff0000",
         "statusBar.background": "#367bf0",
         "editorLineNumber.activeForeground": "#FEA44C",
-        "terminalCursor.background": "#00ff00",
-        "terminalCursor.foreground": "#00ff00",
-        "scrollbarSlider.background": "#00ff00",
-    },
+        "terminalCursor.background": "#ff0000",
+        "terminalCursor.foreground": "#ff0000",
+        "scrollbarSlider.background": "#ff0000",
+        "editorCursor.foreground": "#ff0000",
+        // "terminal.foreground": "#000000",
+        // "terminal.background": "#ffffff",
+        },
     "terminal.integrated.defaultProfile.osx": "zsh",
     "peacock.affectDebuggingStatusBar": true,
     "peacock.affectEditorGroupBorder": true,
@@ -32,18 +34,36 @@
     "peacock.affectStatusAndTitleBorders": true,
     "peacock.surpriseMeOnStartup": true,
     "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "enabled"
+        "vs-kubernetes.crd-code-completion": "enabled",
+        "disable-linters": [
+            "resource-limits"
+        ]
     },
     "editor.tabCompletion": "on",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.sideBar.location": "right",
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "workbench.editor.tabSizing": "shrink",
+    // "workbench.editor.tabSizing": "shrink",
     "window.nativeTabs": true,
     "terminal.integrated.tabStopWidth": 4,
+    // "workbench.editor.showTabs": "single",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.accessibilitySupport": "off",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "catppuccin-latte",
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
     "workbench.editor.scrollToSwitchTabs": true,
-    "workbench.editor.showTabs": "single",
-    "window.zoomLevel": 1,
-    "git.openRepositoryInParentFolders": "never"
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    "editor.fontSize": 13,
+    "continue.telemetryEnabled": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "yaml.schemas": {
+        "/Users/badger/.vscode/extensions/continue.continue-1.0.7-darwin-arm64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+    "docker.extension.enableComposeLanguageServer": false,
+    "editor.cursorBlinking": "solid",
+    "terminal.integrated.cursorStyleInactive": "block"
 }

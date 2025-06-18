@@ -41,7 +41,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -71,26 +71,27 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    ansible
     brew
-    bundler
     colored-man-pages
+    colorize
     copypath
     cp
     docker
     docker-compose
     dotenv
     emoji
-    git
-    helm
-    kubectl
-    macos
     history
-    pip
-    python
+    kubectl
+    lxd
+    microk8s
     rake
     rbenv
-    rsync
+    ssh
+    starship
     sudo
+    tailscale
+    terraform
     themes
     tmux
     vscode
@@ -131,10 +132,28 @@ bindkey '^[OA' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^[OB' history-substring-search-down
 setopt no_flow_control
-~/.local/bin/theme.sh shel
+~/.local/bin/theme.sh wez
 eval "$(starship init zsh)"
 
+alias k="kubectl"
 alias kn="kubectl get nodes -owide"
 alias kp="kubectl get pods -A -owide"
 alias ks="kubectl get svc -A -owide"
 alias ki="kubectl get ingress -A -owide"
+
+alias nas="ssh admin@nas.home.lab"
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin/:$PATH"
+export PATH="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin/:$PATH"
+export PATH="/usr/local/bin/:$PATH"
+export SOPS_AGE_KEY_FILE=$HOME/.sops/key.txt
+export KUBE_EDITOR=vim
+
+setopt nocorrect
+unsetopt correct_all
+
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue

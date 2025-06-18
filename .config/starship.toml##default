@@ -1,5 +1,4 @@
 # Modified from https://github.com/xcad2k/dotfiles/blob/main/.config/starship.toml by @xcad2k
-
 # ~/.config/starship.toml
 
 # Inserts a blank line between shell prompts
@@ -15,7 +14,7 @@ $all[╰─](blue)$character"""
 # 
 # Change the default prompt characters
 [character]
-success_symbol = "[>](blue)"
+success_symbol = "[🦕 ](blue)"
 error_symbol = "[💥](238)"
 
 # Shows an icon that should be included by zshrc script based on the distribution or os
@@ -78,13 +77,6 @@ format = "via [ $version](bold purple) "
 symbol = "🐍 "
 python_binary = "python3"
 
-[nodejs]
-format = "via [🤖 $version](bold green) "
-disabled = true
-
-[ruby]
-format = "via [ $version]($style) "
-
 [kubernetes]
 format = 'on [⛵︎ $context](bold purple) '
 disabled = false
@@ -104,3 +96,8 @@ time_format = "%T"
 format = "$time($style) "
 style = "bright-white"
 disabled = false
+
+[aws]
+format = 'on [$symbol($profile ) $region ]($style)'
+style = 'bold yellow'
+symbol = '☁️ '
